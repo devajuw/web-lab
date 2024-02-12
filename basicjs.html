@@ -9,19 +9,34 @@
     <p id="p1"></p>
     <p id="p2"></p>
     <script>
-      var n = parseInt(prompt("Enter a Number"))
-      var str1 = "Hello"
-      var str2 = "BCA"
-      var result = ""
-      var output = ""
-      result = result + str1.charAt(0) + "<br>"
-      result = result + str1.concat(" " + str2) + "<br>"
-      result = result + str1.indexOf("l") + "<br>"
-      output = output + str1.includes("llo") + "<br>"
-      output = output + str1.lastIndexOf("P") + "<br>"
+            var str1 = "Hello"
+            var str2 = "BCA"
+            var result = ""
+            var output = ""
+            var disp=""
+            result = result + str1.charAt(0) + "<br>"
+            result = result + str1.concat(" " + str2) + "<br>"
+            result = result + str1.indexOf("l") + "<br>"
+            output = output + str1.includes("llo") + "<br>"
+            output = output + str1.lastIndexOf("P") + "<br>"
+      var x= new Array(0);
+      var size=parseInt(prompt("Enter Array Size"));
+      var i;
+      // if(is NaN(size))
+      // alert("Invalid Input")
+      // else
+      for(i=0;i<size;i++)
+      {
+        x[i]=parseInt(prompt("Enter the element "+i))
 
-      document.getElementById("p1").innerHTML = result
-      document.getElementById("p2").innerHTML = output
+      }
+      for(i=0;i<size;i++)
+      {
+        disp=disp+x[i]+" ";
+      }
+            document.getElementById("p1").innerHTML = result
+            document.getElementById("p2").innerHTML = output
+            document.getElementById("p2").innerHTML = disp
     </script>
   </body>
 </html>
