@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic JS</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      var n = parseInt(prompt("Enter a Number"))
+      var str1 = "Hello"
+      var str2 = "BCA"
+      var result = ""
+      var output = ""
+      result = result + str1.charAt(0) + "<br>"
+      result = result + str1.concat(" " + str2) + "<br>"
+      result = result + str1.indexOf("l") + "<br>"
+      output = output + str1.includes("llo") + "<br>"
+      output = output + str1.lastIndexOf("P") + "<br>"
+
+      document.getElementById("p1").innerHTML = result
+      document.getElementById("p2").innerHTML = output
+    </script>
+  </body>
+</html>

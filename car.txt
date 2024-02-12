@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>CARS</title>
+</head>
+<body>
+    <h1>Popular Car Companies</h1>
+    <dl>
+      <dt>Toyota</dt>
+      <dd>Founded in 1937, Toyota is the world's largest automaker by production volume. Known for its reliable and fuel-efficient vehicles, like the Camry and Corolla.</dd>
+      <dt>Tesla</dt>
+      <dd>Established in 2003, Tesla is a leading electric vehicle (EV) manufacturer. Popular models include the Model S, Model 3, and Model Y, known for their performance and innovation.</dd>
+      <dt>Volkswagen Group</dt>
+      <dd>Founded in 1937, the Volkswagen Group is a German multinational conglomerate consisting of several popular car brands like Volkswagen, Audi, Porsche, and Skoda.</dd>
+      <dt>Honda</dt>
+      <dd>Founded in 1948, Honda is a Japanese multinational corporation. Known for its reliable and fuel-efficient cars and motorcycles, like the Accord and Civic.</dd>
+      <dt>Ford</dt>
+      <dd>Founded in 1903, Ford is an American multinational automaker. Popular models include the F-Series trucks, Mustang, and Explorer, known for their performance and practicality.</dd>
+    </dl>
+</body>
+</html>
