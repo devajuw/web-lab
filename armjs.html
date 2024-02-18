@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head> </head>
+    
+    <title>Armstrong Number</title>
+</head>
+<body>
+    Enter a Number:<input type="text" id="t1"><br><br>
+    Armstrong Yes or No:
+    <input type="text" id="t2"><br><br>
+    <input type="button" name="calculate" value="Calculate" onclick="checkarmstrong()">
+    <script>
+        function checkarmstrong()
+        {
+            let number=parseInt(document.getElementById("t1").value);
+            let sum=0;
+            let originalNum=number;
+            while(number>0)
+            {
+                let r=number%10;
+                sum=sum+(r*r*r);
+                number=Math.floor(number/10);
+            }
+            if(sum==originalNum)
+            document.getElementById("t2").value="yes";
+        else
+        document.getElementById("t2").value="NO";
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
