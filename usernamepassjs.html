@@ -1,32 +1,36 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Code for form check</title>
+    <title>Form Validation Example</title>
 </head>
-<script>
-    function checkSubmit() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        
-        if (username == "") {
-            alert("Username is mandatory");
-            return false;
-        }
-        
-        if (password.length <= 8) {
-            alert("Password must be more than 8 characters");
-            return false;
-        }
-        
-        alert("Submitted Successfully");
-    }
-</script>
 <body>
+    <script>
+        function checkSubmit() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username.trim() === "") {
+                alert("Username is mandatory");
+                return false;
+            }
+            
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+            
+            alert("Submitted Successfully");
+        }
+    </script>
+
     <form onsubmit="return checkSubmit()">
         <label for="username">Enter a name:</label><br/>
-        <input type="text" id="username"><br/>
+        <input type="text" id="username" name="username"><br/>
         
         <label for="password">Enter a password:</label><br/>
-        <input type="text" id="password"><br/>
+        <input type="password" id="password" name="password"><br/>
         
+        <input type="submit" value="Submit">
     </form>
 </body>
+</html>
