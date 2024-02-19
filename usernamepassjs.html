@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Code for form check</title>
+</head>
+<script>
+    function checkSubmit() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        if (username == "") {
+            alert("Username is mandatory");
+            return false;
+        }
+        
+        if (password.length <= 8) {
+            alert("Password must be more than 8 characters");
+            return false;
+        }
+        
+        alert("Submitted Successfully");
+    }
+</script>
+<body>
+    <form onsubmit="return checkSubmit()">
+        <label for="username">Enter a name:</label><br/>
+        <input type="text" id="username"><br/>
+        
+        <label for="password">Enter a password:</label><br/>
+        <input type="text" id="password"><br/>
+        
+    </form>
+</body>
