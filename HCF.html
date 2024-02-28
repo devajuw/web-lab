@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HCF</title>
+</head>
+<body>
+    <script>
+        let num1 = 25;
+        let num2 = 55;
+
+        let min = num1 < num2 ? num1 : num2;
+        let hcf = 1;
+        let fact1, fact2;
+        
+        for (let i = 1; i <= min; i++) {
+            if (num1 % i === 0) {
+                fact1 = i; // Storing factors of num1
+            }
+            if (num2 % i === 0) {
+                fact2 = i; // Storing factors of num2
+            }
+        }
+
+        // Loop through all common factors to find the highest
+        for (let i = 1; i <= min; i++) {
+            if (num1 % i === 0 && num2 % i === 0) {
+                hcf = i;
+            }
+ 
+        }
+        
+        document.write("HCF of " + num1 + " and " + num2 + " is: " + hcf);
+    </script>
+</body>
+</html>

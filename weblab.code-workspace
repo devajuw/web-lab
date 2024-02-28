@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"debug.terminal.clearBeforeReusing": true,
+		"terminal.integrated.copyOnSelection": true,
+		"terminal.integrated.cursorStyle": "line",
+		"liveServer.settings.multiRootWorkspaceName": "CODE"
+	}
+}
