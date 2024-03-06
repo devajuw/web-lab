@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>JS binary search</title>
+  </head>
+  <body>
+    <script>
+      let n = parseInt(prompt("Enter The Number Of Elements "));
+      let a = new Array();
+      let i, j;
+      // Taking input
+      for (i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Enter Number " + (i + 1)));
+      }
+      // bubble sort [desc order]
+      for (i = 0; i < n; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+          // n-i-1 to lower the complexity
+          if (a[j] < a[j + 1]) {
+            let t = a[j];
+            a[j] = a[j + 1];
+            a[j + 1] = t;
+          }
+        }
+      }
+      document.write("The Sorted ARRAY :- <br>");
+      for (i = 0; i < n; i++) {
+        document.write(a[i] + "<br>");
+      }
+      // binary Search
+      let target = parseInt(prompt("Enter The Target element "));
+      let left = 0;
+      let right = n - 1;
+      let flag = false;
+      while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        if (a[mid] === target) {
+          flag = true;
+          document.write("Target " + target + " found in the array at index " + mid);
+          break;
+        } else if (a[mid] < target) right = mid - 1;
+        else left = mid + 1;
+      }
+      if (!flag) document.write("Target " + target + " not found in the array");
+    </script>
+  </body>
+</html>
