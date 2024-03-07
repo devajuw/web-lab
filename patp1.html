@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Half Pyramid Pattern</title>
+</head>
+<body>
+    <textarea id="patternTextArea" rows="4" cols="70" style="font-size:25px " ></textarea>
+
+    <script>
+        const textarea = document.getElementById('patternTextArea');
+        let pattern = '';
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                pattern += '* ';
+            }
+            pattern += '\n';
+        }
+
+        textarea.value = pattern;
+    </script>
+</body>
+</html>
