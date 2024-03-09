@@ -4,10 +4,10 @@
     <title>Star Half Pyramid Pattern</title>
 </head>
 <body>
-    <textarea id="patternTextArea" rows="4" cols="70" style="font-size:25px " ></textarea>
+    <textarea id="t1" rows="4" cols="70" style="font-size:25px " ></textarea>
 
     <script>
-        const textarea = document.getElementById('patternTextArea');
+        textarea = document.getElementById('t1');
         let pattern = '';
 
         for (let i = 1; i <= 5; i++) {
@@ -16,7 +16,6 @@
             }
             pattern += '\n';
         }
-
         textarea.value = pattern;
     </script>
 </body>
