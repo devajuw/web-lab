@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vowel Counter</title>
+  </head>
+  <body bgcolor="hotpink">
+    <h1><u>MARKS CALCULATOR</u></h1>
+    <label for="subject1">Subject 1:</label>
+    <input type="number" id="subject1" name="subject1"><br><br>
+
+    <label for="subject2">Subject 2:</label>
+    <input type="number" id="subject2" name="subject2"><br><br>
+
+    <label for="subject3">Subject 3:</label>
+    <input type="number" id="subject3" name="subject3" ><br><br>
+    <button onclick="Aggregate()">Aggregate</button>
+<button onclick="Percentage()">Percentage</button>
+<p id="result"></p>
+
+<script>
+    let s1, s2, s3;
+
+    function Aggregate() {
+        s1 = parseInt(document.getElementById("subject1").value);
+        s2 = parseInt(document.getElementById("subject2").value);
+        s3 = parseInt(document.getElementById("subject3").value);
+        const agg = (s1 + s2 + s3) / 3;
+        document.getElementById("result").innerHTML = "Aggregate of the 3 subjects is: " + agg;
+    }
+
+    function Percentage() {
+        s1 = parseInt(document.getElementById("subject1").value);
+        s2 = parseInt(document.getElementById("subject2").value);
+        s3 = parseInt(document.getElementById("subject3").value);
+        const percent = ((s1 + s2 + s3) / 300) * 100;
+        document.getElementById("result").innerHTML = "The Percentage Marks of the 3 subjects is: " + percent + '%';
+    }
+</script>
+
+  </body>
+</html>
