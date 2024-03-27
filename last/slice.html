@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Slicing</title>
+</head>
+<body>
+    <h1>Slice a String</h1>
+    <input type="text" id="inputString" placeholder="Enter a String">
+    <button onclick="sliceString()">Slice</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+    <script>
+        function sliceString() {
+            const inputString = document.getElementById("inputString").value;
+            const stringLength = inputString.length;
+
+            // Handle edge cases for strings shorter than three characters
+            if (stringLength < 3) {
+                document.getElementById("result1").textContent = "String is too short.";
+                document.getElementById("result2").textContent = "";
+                document.getElementById("result3").textContent = "";
+                return;
+            }
+
+            // Calculate approximate division points
+            const firstSliceEnd = Math.floor(stringLength / 3);
+            const secondSliceEnd = Math.floor(stringLength * 2 / 3);
+
+            // Extract substrings
+            const firstSlice = inputString.substring(0, firstSliceEnd);
+            const secondSlice = inputString.substring(firstSliceEnd, secondSliceEnd);
+            const thirdSlice = inputString.substring(secondSliceEnd);
+
+            document.getElementById("result1").textContent = "First Slice: " + firstSlice;
+            document.getElementById("result2").textContent = "Second Slice: " + secondSlice;
+            document.getElementById("result3").textContent = "Third Slice: " + thirdSlice;
+        }
+    </script>
+</body>
+</html>
