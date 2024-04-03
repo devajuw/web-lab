@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@nd largest wordt</title>
+</head>
+
+<body>
+    <script>
+    var n = parseInt(prompt("Enter Number Of words"));
+    var words = []; // Create an empty array
+    
+    for (let i = 0; i < n; i++) {  // Use 'let' for loop variable
+      words.push(prompt("Enter " + (i + 1) + " th word"));
+    }
+    
+    let largest = "";
+    let secondLargest = "";
+    
+    for (let word of words) {
+      if (word.length > largest.length) {
+        secondLargest = largest;
+        largest = word;
+      } else if (word.length > secondLargest.length && word !== largest) {
+        secondLargest = word;
+      }
+    }
+    
+    document.write("The 2nd Largest Word is :- " + secondLargest);
+    
+    </script>
+</body>
+
+</html>
