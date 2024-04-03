@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        let a = [1, 3, 5, 7, 9, 10, 23];
+        let b = [2, 4, 6, 8, 10, 11, 12];
+        let c = new Array();
+        let i = 0, j = 0;
+        let prev = null; // Keep track of the previously added element
+
+        // Loop until both arrays are exhausted
+        while (i < a.length && j < b.length) {
+            if (a[i] < b[j]) {
+                if (a[i] !== prev) { // Check for duplicates
+                    c.push(a[i]);
+                    prev = a[i];
+                }
+                i++;
+            } else {
+                if (b[j] !== prev) { // Check for duplicates
+                    c.push(b[j]);
+                    prev = b[j];
+                }
+                j++;
+            }
+        }
+
+        // Add remaining elements from the longer array (optimized)
+        c = c.concat(a.slice(i)).concat(b.slice(j));
+
+        document.write(c);
+    </script>
+</body>
+
+</html>
