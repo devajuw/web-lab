@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kth largest word</title>
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Enter Number Of words"));
+        var k = parseInt(prompt("Enter Value of K"));
+
+        var words = []; // Create an empty array
+
+        for (let i = 0; i < n; i++) {
+            words.push(prompt("Enter " + (i + 1) + " th word"));
+        }
+
+        // Loop through each word (bubble sort approach)
+        for (let i = 0; i < words.length - 1; i++) {
+            for (let j = i + 1; j < words.length; j++) {
+                if (words[j].length < words[i].length) {
+                    // Swap words if current word is longer
+                    const temp = words[i];
+                    words[i] = words[j];
+                    words[j] = temp;
+                }
+            }
+        }
+
+        // Check if K is within valid range
+        if (k <= 0 || k > words.length) {
+            document.write("Invalid value for K");
+        } else {
+            document.write(k + "th Largest Word is :- " + words[k - 1]);
+        }
+
+
+    </script>
+</body>
+
+</html>
